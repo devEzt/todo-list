@@ -24,11 +24,12 @@ const App = () => {
     },
   ])
 
+  //Tenho uma funcao que recebe uma string qualquer e cria um item novo na lista
   const handleAddTask = (taskMame: string) => {
     let newList = [...list]
     newList.push({
-      id: 123,
-      name: '',
+      id: list.length + 1,
+      name: taskMame,
       done: false,
     })
     setList(newList)
@@ -39,7 +40,7 @@ const App = () => {
       <C.Area>
         <C.Header>Lista de Atividades</C.Header>
 
-        <AddItem />
+        <AddItem onEnter={handleAddTask} />
 
         {list.map((item, index) => (
           <ListItem key={index} item={item} />

@@ -5,7 +5,8 @@ export const AddItem = () => {
   const [inputText, setInputText] = useState('')
 
   const handleKeyUp = (e: KeyboardEvent) => {
-    console.log(e.code)
+    if (e.code === 'Enter' && inputText !== '') {
+    }
   }
 
   return (

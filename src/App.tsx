@@ -4,7 +4,7 @@ import { Item } from './types/Item'
 import { ListItem } from './components/ListItem'
 
 const App = () => {
-  const [list, setList] = useState<Item[]>([
+  const [list, _setList] = useState<Item[]>([
     {
       id: 1,
       name: 'Comprar pao na padaria',
